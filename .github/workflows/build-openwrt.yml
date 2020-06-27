@@ -3,7 +3,7 @@
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: MIT
 # Author: P3TERX
-# Blog: https://p3terx.com
+# Blog: https://p3terx.com dingshirenwu
 #=================================================
 
 name: Build OpenWrt
@@ -17,8 +17,8 @@ on:
       - master
     paths:
       - '.config'
- schedule:
-   - cron: 0 8 * * *
+    schedule:
+      - cron: 0 8 * * *
 #  watch:
 #    types: started
 
@@ -32,7 +32,7 @@ env:
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
-  UPLOAD_COWTRANSFER: false
+  UPLOAD_COWTRANSFER: true
   UPLOAD_WETRANSFER: false
   TZ: Asia/Shanghai
 
